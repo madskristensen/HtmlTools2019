@@ -1,15 +1,13 @@
-# Html Tools
+# Html Tools 2019
 
 [![Build status](https://ci.appveyor.com/api/projects/status/c7w5c0kjva6jv0yu?svg=true)](https://ci.appveyor.com/project/madskristensen/htmltools2019)
 
-Download this extension from the [VS Marketplace](https://marketplace.visualstudio.com/vsgallery/0f48200f-ea7d-4e82-b366-45c1965768a7)
-or get the [CI build](http://vsixgallery.com/extension/3cef2919-d8c7-4e9f-a809-5a0ba9c61fac/).
+Download this extension from the [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.HtmlTools)
+or get the [CI build](http://vsixgallery.com/extension/8682fae0-2ce9-49ea-93b5-edc92c118e2a/).
 
 ---------------------------------------
 
 Productivity tools for the HTML editor
-
-See the [change log](CHANGELOG.md) for changes and road map.
 
 ## Features
 
@@ -77,16 +75,6 @@ Validates that the itemtype attribute is a valid absolute URL.
 
 #### rel=logo
 Validates that the `type` attribute has the value `image/svg`
-
-## Contribute
-Check out the [contribution guidelines](.github/CONTRIBUTING.md)
-if you want to contribute to this project.
-
-For cloning and building this project yourself, make sure
-to install the
-[Extensibility Tools 2015](https://visualstudiogallery.msdn.microsoft.com/ab39a092-1343-46e2-b0f1-6a3f91155aa6)
-extension for Visual Studio which enables some features
-used by this project.
 
 ## License
 [Apache 2.0](LICENSE)
