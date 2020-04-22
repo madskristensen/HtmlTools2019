@@ -104,14 +104,14 @@ namespace HtmlTools
             }
             catch (Exception ex)
             {
-                qiContent.Add(new Image { Source = noPreview });
+                qiContent.Add(new Image { Source = noPreview, Width = 150, Height = 150 });
                 qiContent.Add(ex.Message);
                 return;
             }
 
             if (source == null)
             {
-                qiContent.Add(new Image { Source = noPreview });
+                qiContent.Add(new Image { Source = noPreview, Width = 150, Height = 150 });
                 qiContent.Add("Couldn't locate " + url);
                 return;
             }
@@ -146,6 +146,8 @@ namespace HtmlTools
                 EventHandler<System.Windows.Media.ExceptionEventArgs> failure = (s, e) =>
                 {
                     image.Source = noPreview;
+                    image.Width = 150;
+                    image.Height = 150;
                     SetText(size, "Couldn't load image: " + e.ErrorException.Message);
                 };
                 source.DecodeFailed += failure;
