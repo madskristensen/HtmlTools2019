@@ -117,7 +117,7 @@ namespace HtmlTools
             if (source == null)
             {
                 qiContent.Add(new Image { Source = noPreview, Width = 150, Height = 150 });
-                qiContent.Add("Couldn't locate " + url);
+                qiContent.Add("Couldn't locate " + url.Replace(@"\wwwroot", @" [ \wwwroot ] "));
                 return;
             }
 
