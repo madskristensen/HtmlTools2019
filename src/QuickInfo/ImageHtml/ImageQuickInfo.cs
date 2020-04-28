@@ -92,7 +92,12 @@ namespace HtmlTools
             }
 
             text = Uri.UnescapeDataString(text);
-            return ProjectHelpers.ToAbsoluteFilePath(text, sourceFilename);
+            string absoluteFile = ProjectHelpers.ToAbsoluteFilePath(text, sourceFilename);
+            if (!File.Exists(absoluteFile) && text.StartsWith("/"))
+            {
+                absoluteFile = ProjectHelpers.ToAbsoluteFilePath("/wwwroot" + text, sourceFilename);
+            }
+            return absoluteFile;
         }
 
         public static void AddImageContent(IList<object> qiContent, string url)
@@ -112,7 +117,7 @@ namespace HtmlTools
             if (source == null)
             {
                 qiContent.Add(new Image { Source = noPreview, Width = 150, Height = 150 });
-                qiContent.Add("Couldn't locate " + url);
+                qiContent.Add("Couldn't locate " + url.Replace(@"\wwwroot", @" [ \wwwroot ] "));
                 return;
             }
 
